@@ -17,9 +17,9 @@ md5sums=('SKIP')
 
 build() {   
   #compiler strings are taken from VC4C cmake file (which originally installs lib, but..)
-  cd ${srcdir}
-  clang -cc1 -triple spir-unknown-unknown -O3 -ffp-contract=off -cl-std=CL1.2 -cl-kernel-arg-info -cl-single-precision-constant -Wno-all -Wno-gcc-compat -Wdouble-promotion -Wno-undefined-inline -x cl -emit-pch -o $(srcdir)/include/VC4CLStdLib.h.pch ${srcdir}/include/VC4CLStdLib.h
-  clang -cc1 -triple spir-unknown-unknown -O3 -ffp-contract=off -cl-std=CL1.2 -cl-kernel-arg-info -cl-single-precision-constant -Wno-all -Wno-gcc-compat -Wdouble-promotion -Wno-undefined-inline -x cl -emit-llvm-bc -o $(srcdir)/include/VC4CLStdLib.bc ${srcdir}/include/VC4CLStdLib.h
+  cd $srcdir
+  clang -cc1 -triple spir-unknown-unknown -O3 -ffp-contract=off -cl-std=CL1.2 -cl-kernel-arg-info -cl-single-precision-constant -Wno-all -Wno-gcc-compat -Wdouble-promotion -Wno-undefined-inline -x cl -emit-pch -o include/VC4CLStdLib.h.pch include/VC4CLStdLib.h
+  clang -cc1 -triple spir-unknown-unknown -O3 -ffp-contract=off -cl-std=CL1.2 -cl-kernel-arg-info -cl-single-precision-constant -Wno-all -Wno-gcc-compat -Wdouble-promotion -Wno-undefined-inline -x cl -emit-llvm-bc -o include/VC4CLStdLib.bc include/VC4CLStdLib.h
 }
 
 package() {  
