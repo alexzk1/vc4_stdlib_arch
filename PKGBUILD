@@ -10,7 +10,6 @@ arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
 
 license=('MIT')
 depends=(opencl-headers)
-optdepends(ocl-icd)
 makedepends=(llvm clang)
 source=(git://github.com/doe300/VC4CLStdLib)        
 md5sums=('SKIP')
