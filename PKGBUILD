@@ -5,7 +5,7 @@ pkgrel=1
 pkgdesc="It is VC4CL implementation of the OpenCL standard-library and is required to build the VC4C compiler."
 
 provides=('VC4CLStdLib')
-arch=('arm' 'armv6h')
+arch=('i686' 'x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')
 
 
 license=('MIT')
